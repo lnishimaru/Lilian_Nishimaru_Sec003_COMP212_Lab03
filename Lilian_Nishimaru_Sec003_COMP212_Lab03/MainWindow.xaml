@@ -10,12 +10,12 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label Content="Name of Patient:" HorizontalAlignment="Left" Margin="42,54,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Name of Patient:" HorizontalAlignment="Left" Margin="42,54,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="0.491,1.113"/>
         <Label Content="DENTAL PAYMENT SYSTEM" HorizontalAlignment="Left" Margin="277,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Adress" HorizontalAlignment="Left" Margin="42,85,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Adress" HorizontalAlignment="Left" Margin="42,87,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Dental Services Available" HorizontalAlignment="Left" Margin="500,54,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Height="23" Margin="158,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="addressTextBox" HorizontalAlignment="Left" Height="23" Margin="158,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Height="23" Margin="158,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282"/>
+        <TextBox x:Name="addressTextBox" HorizontalAlignment="Left" Height="23" Margin="158,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282"/>
         <RadioButton x:Name="seniorRadioButton" Content="Senior" HorizontalAlignment="Left" Margin="55,153,0,0" VerticalAlignment="Top" GroupName="discountCategory"/>
         <RadioButton x:Name="kidsRadioButton" Content="Kids and Youth" HorizontalAlignment="Left" Margin="158,153,0,0" VerticalAlignment="Top" GroupName="discountCategory"/>
         <RadioButton x:Name="adultRadioButton" Content="Adult" HorizontalAlignment="Left" Margin="310,153,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.513,-0.746" GroupName="discountCategory" IsChecked="True"/>
@@ -26,7 +26,13 @@
         <TextBox x:Name="resultTextBox" HorizontalAlignment="Left" Height="23" Margin="55,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="419" IsEnabled="False" Background="{x:Null}" BorderBrush="{x:Null}"/>
         <Label x:Name="priceRootCanalLabel" Content="$150.00" HorizontalAlignment="Left" Margin="610,150,0,0" VerticalAlignment="Top"/>
         <Label x:Name="priceFillingLabel" Content="$75.00" HorizontalAlignment="Left" Margin="616,120,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="calculateButton" Content="Calculate" HorizontalAlignment="Left" Margin="500,208,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="calculateButton" Content="Calculate" HorizontalAlignment="Left" Margin="500,208,0,0" VerticalAlignment="Top" Width="75" Click="calculateButton_Click"/>
+        <ComboBox x:Name="provinceComboBox" HorizontalAlignment="Left" Margin="158,123,0,0" VerticalAlignment="Top" Width="120">
+            <ListBoxItem Content="Alberta"/>
+            <ListBoxItem Content="Ontario"/>
+            <ListBoxItem Content="Quebec"/>
+        </ComboBox>
+        <Label Content="Province" HorizontalAlignment="Left" Margin="42,123,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
 
     </Grid>
 </Window>
